@@ -1,5 +1,5 @@
-import one from "./modules/one";
-import two from "./modules/two";
+import timer from "./modules/timer";
+// import interactiveTime from "./modules/interactiveTime";
 
-one();
-two();
+timer("03 July 2023 22:04");
+// interactiveTime();
