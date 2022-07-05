@@ -721,14 +721,24 @@ footer .web {
 .popup .popup-close {
   position: absolute;
   z-index: 999999;
-  top: 0;
+  top: 1rem;
   right: 1rem;
-  width: 2rem;
+  width: 3rem;
+  height: 3rem;
   text-align: center;
   border: none;
-  background: #24241f;
+  background: transparent;
   font-size: 3rem;
+  line-height: 3rem;
   color: #19b5fe;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform-origin: 50% 56%;
+  transform-origin: 50% 56%;
+
+  &:hover {
+    transform: rotate(180deg);
+  }
 }
 .thanks-block {
   padding-top: 10rem;

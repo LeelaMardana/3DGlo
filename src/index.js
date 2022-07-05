@@ -1,5 +1,7 @@
 import timer from "./modules/timer";
-// import interactiveTime from "./modules/interactiveTime";
+import menu from "./modules/menu";
+import modal from "./modules/modal";
 
 timer("03 July 2023 22:04");
-// interactiveTime();
+menu();
+modal();

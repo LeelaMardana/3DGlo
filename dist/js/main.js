@@ -16,7 +16,27 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/timer */ \"./modules/timer.js\");\n\r\n// import interactiveTime from \"./modules/interactiveTime\";\r\n\r\n(0,_modules_timer__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"03 July 2023 22:04\");\r\n// interactiveTime();\r\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/timer */ \"./modules/timer.js\");\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/menu */ \"./modules/menu.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n\r\n\r\n\r\n\r\n(0,_modules_timer__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"03 July 2023 22:04\");\r\n(0,_modules_menu__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./modules/menu.js":
+/*!*************************!*\
+  !*** ./modules/menu.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst menu = () => {\r\n  const menuBtn = document.querySelector(\".menu\");\r\n  const menu = document.querySelector(\"menu\");\r\n  const closeBtn = document.querySelector(\".close-btn\");\r\n  const menuItems = menu.querySelectorAll(\"ul>li>a\");\r\n\r\n  const array = [...menuItems, closeBtn, menuBtn];\r\n\r\n  array.forEach((item) => {\r\n    item.addEventListener(\"click\", () => menu.classList.toggle(\"active-menu\"));\r\n  });\r\n};\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menu);\r\n\n\n//# sourceURL=webpack:///./modules/menu.js?");
+
+/***/ }),
+
+/***/ "./modules/modal.js":
+/*!**************************!*\
+  !*** ./modules/modal.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst modal = () => {\r\n  const modal = document.querySelector(\".popup\");\r\n  const modalInner = modal.querySelector(\".popup-content\");\r\n  const buttons = document.querySelectorAll(\".popup-btn\");\r\n  const closeBtn = document.querySelector(\".popup-close\");\r\n\r\n  let i = 0;\r\n  let a = 0;\r\n\r\n  const toDefault = () => {\r\n    modal.style.display = \"\";\r\n    i = 0;\r\n    a = 0;\r\n  };\r\n\r\n  const animation = () => {\r\n    const width = document.documentElement.clientWidth;\r\n    if (width > 768) {\r\n      const idInterval = requestAnimationFrame(animation);\r\n      modalInner.style.opacity = 0;\r\n      modalInner.style.left = 0;\r\n\r\n      a++;\r\n      i = i + 0.03;\r\n\r\n      modalInner.style.left = a + \"%\";\r\n      modalInner.style.opacity = i;\r\n\r\n      if (a > 37) {\r\n        cancelAnimationFrame(idInterval);\r\n      }\r\n    }\r\n  };\r\n\r\n  buttons.forEach((button) =>\r\n    button.addEventListener(\"click\", () => {\r\n      modal.style.display = \"block\";\r\n      animation();\r\n    })\r\n  );\r\n  closeBtn.addEventListener(\"click\", toDefault);\r\n  modal.addEventListener(\"click\", (e) => {\r\n    if (!modalInner.contains(e.target)) toDefault();\r\n  });\r\n  document.addEventListener(\"keydown\", (e) => {\r\n    if (modal.style.display.length !== 0 && e.key === \"Escape\") toDefault();\r\n  });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);\r\n\n\n//# sourceURL=webpack:///./modules/modal.js?");
 
 /***/ }),
 
