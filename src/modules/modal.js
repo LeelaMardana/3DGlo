@@ -1,7 +1,7 @@
 const modal = () => {
   const modal = document.querySelector(".popup");
   const modalInner = modal.querySelector(".popup-content");
-  const buttons = document.querySelectorAll(".popup-btn");
+  const buttons = document.querySelectorAll(".btn.form-btn");
   const closeBtn = document.querySelector(".popup-close");
 
   let i = 0;
@@ -34,8 +34,10 @@ const modal = () => {
 
   buttons.forEach((button) =>
     button.addEventListener("click", () => {
-      modal.style.display = "block";
-      animation();
+      if (modal.style.display !== "block") {
+        modal.style.display = "block";
+        animation();
+      }
     })
   );
   closeBtn.addEventListener("click", toDefault);
