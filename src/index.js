@@ -1,9 +1,11 @@
 import timer from "./modules/timer";
 import menu from "./modules/menu";
 import modal from "./modules/modal";
-import calculate from "./modules/calculate";
+import validation from "./modules/validation";
+import tabs from "./modules/tabs";
 
 timer("03 July 2023 22:04");
 menu();
 modal();
-calculate();
+validation();
+tabs();

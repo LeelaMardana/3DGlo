@@ -1,4 +1,4 @@
-const calculate = () => {
+const validation = () => {
   const calcInputs = document.querySelectorAll(".calc-block > input");
   const textInputs = document.querySelectorAll("[name=user_name], .mess");
   const emailInputs = document.querySelectorAll("[type=email]");
@@ -52,4 +52,4 @@ const calculate = () => {
   });
 };
 
-export default calculate;
+export default validation;

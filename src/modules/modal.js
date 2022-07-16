@@ -1,9 +1,7 @@
 const modal = () => {
   const modal = document.querySelector(".popup");
   const modalInner = modal.querySelector(".popup-content");
-  const buttons = document.querySelectorAll(".btn.form-btn");
-  const closeBtn = document.querySelector(".popup-close");
-
+  const btns = document.querySelector(".service");
   let i = 0;
   let a = 0;
 
@@ -32,18 +30,23 @@ const modal = () => {
     }
   };
 
-  buttons.forEach((button) =>
-    button.addEventListener("click", () => {
-      if (modal.style.display !== "block") {
-        modal.style.display = "block";
-        animation();
-      }
-    })
-  );
-  closeBtn.addEventListener("click", toDefault);
-  modal.addEventListener("click", (e) => {
-    if (!modalInner.contains(e.target)) toDefault();
+  btns.addEventListener("click", (e) => {
+    if (!e.target.closest("button.popup-btn")) {
+      return;
+    } else {
+      modal.style.display = "block";
+      animation();
+    }
   });
+
+  modal.addEventListener("click", (e) => {
+    if (
+      !e.target.closest(".popup-content") ||
+      e.target.classList.contains("popup-close")
+    )
+      toDefault();
+  });
+
   document.addEventListener("keydown", (e) => {
     if (modal.style.display.length !== 0 && e.key === "Escape") toDefault();
   });
