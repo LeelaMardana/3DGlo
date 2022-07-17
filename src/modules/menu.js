@@ -11,6 +11,14 @@ const menu = () => {
   };
 
   body.addEventListener("click", (e) => {
+    //не запускать дальнейшую проверку если клик не прошел по этим двум кнопкам и если не было открыто меню
+    if (
+      !e.target.closest(".menu, main a") &&
+      !menu.classList.contains("active-menu")
+    ) {
+      return;
+    }
+
     //открытие и закрытие меню
     if (e.target.closest(".menu")) {
       menu.classList.add("active-menu");
@@ -21,6 +29,7 @@ const menu = () => {
     ) {
       menu.classList.remove("active-menu");
     }
+
     // запуск плавного скролла
     if (e.target.closest("main a, menu ul li a")) {
       e.preventDefault();

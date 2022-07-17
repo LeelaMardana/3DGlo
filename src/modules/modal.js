@@ -7,36 +7,31 @@ const modal = () => {
 
   const toDefault = () => {
     modal.style.display = "";
+    modalInner.style.opacity = "";
+    modalInner.style.left = "";
     i = 0;
     a = 0;
   };
 
   const animation = () => {
     const width = document.documentElement.clientWidth;
-    if (width > 768) {
-      const idInterval = requestAnimationFrame(animation);
-      modalInner.style.opacity = 0;
-      modalInner.style.left = 0;
+    if (width <= 768) return;
 
-      a++;
-      i = i + 0.03;
+    const idInterval = requestAnimationFrame(animation);
+    a++;
+    i = i + 0.03;
 
-      modalInner.style.left = a + "%";
-      modalInner.style.opacity = i;
+    modalInner.style.left = a + "%";
+    modalInner.style.opacity = i;
 
-      if (a > 37) {
-        cancelAnimationFrame(idInterval);
-      }
-    }
+    if (a >= 38) cancelAnimationFrame(idInterval);
   };
 
   btns.addEventListener("click", (e) => {
-    if (!e.target.closest("button.popup-btn")) {
-      return;
-    } else {
-      modal.style.display = "block";
-      animation();
-    }
+    if (!e.target.closest("button.popup-btn")) return;
+
+    modal.style.display = "block";
+    animation();
   });
 
   modal.addEventListener("click", (e) => {

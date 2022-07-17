@@ -4,15 +4,14 @@ const tabs = () => {
   const tabs = document.querySelectorAll(".service-header-tab");
 
   tabPanel.addEventListener("click", (e) => {
-    if (e.target.closest(".service-header-tab")) {
-      tabs.forEach((tab, index) => {
-        tab === e.target.closest(".service-header-tab")
-          ? (tab.classList.add("active"),
-            tabContent[index].classList.remove("d-none"))
-          : (tab.classList.remove("active"),
-            tabContent[index].classList.add("d-none"));
-      });
-    }
+    if (!e.target.closest(".service-header-tab")) return;
+    tabs.forEach((tab, index) => {
+      tab === e.target.closest(".service-header-tab")
+        ? (tab.classList.add("active"),
+          tabContent[index].classList.remove("d-none"))
+        : (tab.classList.remove("active"),
+          tabContent[index].classList.add("d-none"));
+    });
   });
 };
 

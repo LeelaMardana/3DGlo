@@ -1,0 +1,179 @@
+$name: slider;
+
+.#{$name} {
+  padding: 5rem 0;
+  user-select: none;
+  &-content {
+    position: relative;
+    height: 775px;
+    margin: 0 auto;
+    display: block;
+  }
+  &-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    & img {
+      height: auto;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    &-active {
+      opacity: 1;
+      -webkit-transition: opacity 0.5s;
+      transition: opacity 0.5s;
+    }
+  }
+  &-dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    margin: 20px auto 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 5;
+  }
+  &-dot {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 10px;
+    border-radius: 50%;
+    border: solid #fff;
+    display: inline-block;
+    -webkit-transition: background-color, -webkit-transform 0.4s;
+    transition: background-color, transform 0.4s, -webkit-transform 0.4s;
+    &-active {
+      background-color: #19b5fe;
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+    &:hover {
+      background-color: #53c6fe;
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
+  &-btn {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-size: 34px;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    &.prev {
+      left: 20px;
+      background-image: url(../images/icons/left-arrow.svg);
+      background-position: 25% 50%;
+    }
+    &.next {
+      right: 20px;
+      background-image: url(../images/icons/right-arrow.svg);
+      background-position: 75% 50%;
+    }
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      -webkit-transition: background-color 0.2s;
+      transition: background-color 0.2s;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .#{$name}-content {
+    height: 650px;
+  }
+}
+@media (max-width: 991px) {
+  .#{$name} {
+    &-content {
+      height: 565px;
+      width: 100%;
+    }
+    & a {
+      font-size: 1.2rem;
+    }
+    & .row {
+      display: none;
+    }
+    & .slider {
+      display: inline-block;
+      width: 360px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .#{$name} {
+    height: 100%;
+    &-content {
+      height: 400px;
+    }
+    &-dots {
+      display: none;
+    }
+    & a {
+      font-size: 1rem;
+    }
+    & .tabs ul {
+      border: none;
+    }
+    & .tabs ul li {
+      margin-bottom: 1rem;
+      border: 1px solid #19b5fe;
+      border-radius: 3rem;
+    }
+  }
+}
+@media (max-width: 690px) {
+  .#{$name} {
+    &-btn {
+      width: 40px;
+      height: 40px;
+    }
+    &-btn.next {
+      right: 10px;
+    }
+    &-btn.prev {
+      left: 10px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .#{$name}-content {
+    height: 240px;
+  }
+}
+@media (max-width: 448px) {
+  .#{$name} {
+    &-btn {
+      width: 35px;
+      height: 35px;
+    }
+    &-btn.next {
+      right: 5px;
+    }
+    &-btn.prev {
+      left: 5px;
+    }
+  }
+}
