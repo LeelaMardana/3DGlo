@@ -1,3 +1,5 @@
+import { animate } from './helpers';
+
 const calc = (price = 100) => {
   const calcBlock = document.querySelector('.calc-block');
   const calcType = document.querySelector('.calc-type');
@@ -5,34 +7,12 @@ const calc = (price = 100) => {
   const calcCount = document.querySelector('.calc-count');
   const calcDay = document.querySelector('.calc-day');
   const total = document.querySelector('#total');
-  const speed = 100;
-
-  let totalValue = 0;
-
-  const animate = () => {
-    //саму функцию раположите глобально для более быстрых и правильных расчетов
-    const value = totalValue; //1 число которое нужно показать в конце
-    //2 data принимаеет значение с верстки (перед запуском функции напиши total.innerText = 0)
-    //Для того чтобы data приняла значение = 0 и отчет начинался с нуля до totalValue что всегда запустит анимацию
-    //потому что data ВСЕГДА будет МЕНЬШЕ value то есть 0
-    let data = +total.innerText; //3 должна принять ноль и запустить себя в цикле прибавляя time каждый цикл
-    const time = value / speed; //4 вычесляет time (напиши const speed = 100(быстрее) или speed = 200(медленнее) в глобальной видимости)
-    if (data < value) {
-      // 5 запускаем рекурс где data прибаляется пока не достигнет value
-      total.innerText = Math.ceil(data + time); //6 прибавляем time каждый цикл
-      setTimeout(animate, 1);
-    } else {
-      // 7 после того как date стал больше value, срабатывает это условие
-      // меняется конечный текст анимации на текст который был при расчетах.
-      // ибо конечный текст анимации будет отличаться от текста расчетов
-      total.innerText = Math.round(value);
-    }
-  };
 
   const countCalc = () => {
     const calcTypeValue = +calcType[calcType.selectedIndex].value;
     const calcSquareValue = calcSquare.value;
 
+    let totalValue = 0;
     let calcCountValue = 1;
     let calcDayValue = 1;
 
@@ -62,7 +42,15 @@ const calc = (price = 100) => {
       price * calcSquareValue * calcTypeValue * calcCountValue * calcDayValue;
 
     total.innerText = 0;
-    animate();
+    animate({
+      duration: 500,
+      timing(timeFraction) {
+        return timeFraction;
+      },
+      draw(progress) {
+        total.innerText = Math.round(totalValue * progress);
+      },
+    });
   };
 
   calcBlock.addEventListener('input', e => {
