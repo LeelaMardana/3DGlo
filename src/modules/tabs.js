@@ -15,4 +15,4 @@ const tabs = () => {
   });
 };
 
-export default tabs;
+export { tabs };

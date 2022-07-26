@@ -1,4 +1,4 @@
-const slider = (sliderName = "slider", timeInterval = 3000) => {
+const notslider = (sliderName = 'slider', timeInterval = 3000) => {
   const sliderBlock = document.querySelector(`.${sliderName}-content`);
   const slides = document.querySelectorAll(`.${sliderName}-item`);
 
@@ -11,11 +11,11 @@ const slider = (sliderName = "slider", timeInterval = 3000) => {
   }
 
   const dots = (() => {
-    const dotsBlock = document.createElement("ul");
+    const dotsBlock = document.createElement('ul');
     dotsBlock.classList.add(`${sliderName}-dots`);
     sliderBlock.append(dotsBlock);
     for (let i = 0; i < slides.length; i++) {
-      const dot = document.createElement("li");
+      const dot = document.createElement('li');
       dot.classList.add(`${sliderName}-dot`);
       dotsBlock.append(dot);
     }
@@ -58,7 +58,7 @@ const slider = (sliderName = "slider", timeInterval = 3000) => {
     clearInterval(interval);
   };
 
-  sliderBlock.addEventListener("click", (e) => {
+  sliderBlock.addEventListener('click', e => {
     e.preventDefault();
     if (
       !e.target.matches(`.${sliderName}-dot, .${sliderName}-btn`) ||
@@ -72,9 +72,9 @@ const slider = (sliderName = "slider", timeInterval = 3000) => {
     );
     prevSlide(dots, currentSlide, `${sliderName}-dot-active`);
 
-    if (e.target.matches("#arrow-right")) {
+    if (e.target.matches('#arrow-right')) {
       currentSlide++;
-    } else if (e.target.matches("#arrow-left")) {
+    } else if (e.target.matches('#arrow-left')) {
       currentSlide--;
     } else if (e.target.classList.contains(`${sliderName}-dot`)) {
       dots.forEach((dot, index) => {
@@ -101,8 +101,8 @@ const slider = (sliderName = "slider", timeInterval = 3000) => {
   });
 
   sliderBlock.addEventListener(
-    "mouseenter",
-    (e) => {
+    'mouseenter',
+    e => {
       if (!e.target.matches(`.${sliderName}-dot, .${sliderName}-btn`)) return;
       stopSlide();
     },
@@ -110,8 +110,8 @@ const slider = (sliderName = "slider", timeInterval = 3000) => {
   );
 
   sliderBlock.addEventListener(
-    "mouseleave",
-    (e) => {
+    'mouseleave',
+    e => {
       if (!e.target.matches(`.${sliderName}-dot, .${sliderName}-btn`)) return;
       startSlide(timeInterval);
     },
@@ -121,4 +121,4 @@ const slider = (sliderName = "slider", timeInterval = 3000) => {
   startSlide(timeInterval);
 };
 
-export default slider;
+export { notslider };

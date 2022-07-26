@@ -1,12 +1,12 @@
-@import "bootstrap";
+@import 'bootstrap';
 @font-face {
   font-family: Roboto;
   src: url(../fonts/Roboto-Light.eot);
-  src: url(../fonts/Roboto-Light.eot?#iefix) format("embedded-opentype"),
-    url(../fonts/Roboto-Light.woff2) format("woff2"),
-    url(../fonts/Roboto-Light.woff) format("woff"),
-    url(../fonts/Roboto-Light.ttf) format("truetype"),
-    url(../fonts/Roboto-Light.svg#Roboto-Light) format("svg");
+  src: url(../fonts/Roboto-Light.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/Roboto-Light.woff2) format('woff2'),
+    url(../fonts/Roboto-Light.woff) format('woff'),
+    url(../fonts/Roboto-Light.ttf) format('truetype'),
+    url(../fonts/Roboto-Light.svg#Roboto-Light) format('svg');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -14,11 +14,11 @@
 @font-face {
   font-family: Roboto;
   src: url(../fonts/Roboto-Regular.eot);
-  src: url(../fonts/Roboto-Regular.eot?#iefix) format("embedded-opentype"),
-    url(../fonts/Roboto-Regular.woff2) format("woff2"),
-    url(../fonts/Roboto-Regular.woff) format("woff"),
-    url(../fonts/Roboto-Regular.ttf) format("truetype"),
-    url(../fonts/Roboto-Regular.svg#Roboto-Regular) format("svg");
+  src: url(../fonts/Roboto-Regular.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/Roboto-Regular.woff2) format('woff2'),
+    url(../fonts/Roboto-Regular.woff) format('woff'),
+    url(../fonts/Roboto-Regular.ttf) format('truetype'),
+    url(../fonts/Roboto-Regular.svg#Roboto-Regular) format('svg');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -26,11 +26,11 @@
 @font-face {
   font-family: Roboto;
   src: url(../fonts/Roboto-Medium.eot);
-  src: url(../fonts/Roboto-Medium.eot?#iefix) format("embedded-opentype"),
-    url(../fonts/Roboto-Medium.woff2) format("woff2"),
-    url(../fonts/Roboto-Medium.woff) format("woff"),
-    url(../fonts/Roboto-Medium.ttf) format("truetype"),
-    url(../fonts/Roboto-Medium.svg#Roboto-Medium) format("svg");
+  src: url(../fonts/Roboto-Medium.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/Roboto-Medium.woff2) format('woff2'),
+    url(../fonts/Roboto-Medium.woff) format('woff'),
+    url(../fonts/Roboto-Medium.ttf) format('truetype'),
+    url(../fonts/Roboto-Medium.svg#Roboto-Medium) format('svg');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -38,11 +38,11 @@
 @font-face {
   font-family: Roboto;
   src: url(../fonts/Roboto-Bold.eot);
-  src: url(../fonts/Roboto-Bold.eot?#iefix) format("embedded-opentype"),
-    url(../fonts/Roboto-Bold.woff2) format("woff2"),
-    url(../fonts/Roboto-Bold.woff) format("woff"),
-    url(../fonts/Roboto-Bold.ttf) format("truetype"),
-    url(../fonts/Roboto-Bold.svg#Roboto-Bold) format("svg");
+  src: url(../fonts/Roboto-Bold.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/Roboto-Bold.woff2) format('woff2'),
+    url(../fonts/Roboto-Bold.woff) format('woff'),
+    url(../fonts/Roboto-Bold.ttf) format('truetype'),
+    url(../fonts/Roboto-Bold.svg#Roboto-Bold) format('svg');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -578,15 +578,15 @@ main a {
   font-weight: 400;
   max-width: 435px;
 }
-.calc input[type="number"] {
+.calc input[type='number'] {
   -moz-appearance: textfield;
 }
-.calc input[type="number"]:focus,
-.calc input[type="number"]:hover {
+.calc input[type='number']:focus,
+.calc input[type='number']:hover {
   -moz-appearance: number-input;
 }
-.calc input[type="number"]::-webkit-inner-spin-button,
-.calc input[type="number"]::-webkit-outer-spin-button {
+.calc input[type='number']::-webkit-inner-spin-button,
+.calc input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -763,4 +763,4 @@ footer .web {
   user-select: none;
 }
 
-@import "media";
+@import 'media';

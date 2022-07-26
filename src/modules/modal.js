@@ -23,7 +23,7 @@ const modal = () => {
     const width = document.documentElement.clientWidth;
     if (width <= 768) return;
     animate({
-      duration: 1000,
+      duration: 500,
       timing(timeFraction) {
         return timeFraction;
       },
@@ -47,4 +47,4 @@ const modal = () => {
   });
 };
 
-export default modal;
+export { modal };

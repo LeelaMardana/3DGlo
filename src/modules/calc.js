@@ -64,4 +64,4 @@ const calc = (price = 100) => {
     countCalc();
   });
 };
-export default calc;
+export { calc };

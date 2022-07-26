@@ -1,15 +1,17 @@
-import timer from './modules/timer';
-import menu from './modules/menu';
-import modal from './modules/modal';
-import validation from './modules/validation';
-import tabs from './modules/tabs';
-import slider from './modules/slider';
-import calc from './modules/calc';
+import { timer } from './modules/timer';
+import { menu } from './modules/menu';
+import { modal } from './modules/modal';
+import { validation } from './modules/validation';
+import { tabs } from './modules/tabs';
+import { notslider } from './modules/notslider';
+import { calc } from './modules/calc';
+import { swiper } from './modules/swiper';
 
-timer('03 July 2023 22:04');
+timer('03 July 2023 20:16');
 menu();
 modal();
 validation();
 tabs();
-slider('portfolio', 5000); //slider name/ time interval
+notslider('portfolio', 5000); //notslider name/ time interval
 calc();
+swiper();

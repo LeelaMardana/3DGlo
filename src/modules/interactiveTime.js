@@ -1,8 +1,8 @@
 const interactiveTime = () => {
-  const goodDay = document.querySelectorAll(".ls19__text")[0];
-  const today = document.querySelectorAll(".ls19__text")[1];
-  const timeNow = document.querySelectorAll(".ls19__text")[2];
-  const daysLeft = document.querySelectorAll(".ls19__text")[3];
+  const goodDay = document.querySelectorAll('.ls19__text')[0];
+  const today = document.querySelectorAll('.ls19__text')[1];
+  const timeNow = document.querySelectorAll('.ls19__text')[2];
+  const daysLeft = document.querySelectorAll('.ls19__text')[3];
 
   let date = new Date();
   let weekDay = date.getDay();
@@ -11,33 +11,33 @@ const interactiveTime = () => {
 
   const setGreeting = () => {
     if (time >= 5 && time < 12) {
-      return "Доброе утро";
+      return 'Доброе утро';
     } else if (time >= 12 && time < 18) {
-      return "Добрый день";
+      return 'Добрый день';
     } else if (time >= 18 && time < 24) {
-      return "Добрый вечер";
+      return 'Добрый вечер';
     } else if (time >= 0 && time < 5) {
-      return "Доброй ночи";
+      return 'Доброй ночи';
     } else {
-      return "Приветствуем вас";
+      return 'Приветствуем вас';
     }
   };
   const setWeekDay = () => {
     switch (weekDay) {
       case 0:
-        return "Воскресенье";
+        return 'Воскресенье';
       case 1:
-        return "Понедельник";
+        return 'Понедельник';
       case 2:
-        return "Вторник";
+        return 'Вторник';
       case 3:
-        return "Среда";
+        return 'Среда';
       case 4:
-        return "Четверг";
+        return 'Четверг';
       case 5:
-        return "Пятница";
+        return 'Пятница';
       case 6:
-        return "Суббота";
+        return 'Суббота';
     }
   };
   const getDaysLeft = () => {
@@ -54,9 +54,9 @@ const interactiveTime = () => {
   };
 
   goodDay.textContent = setGreeting();
-  today.textContent = "Сегодня: " + setWeekDay();
-  timeNow.textContent = "Текущее время: " + amPm;
-  daysLeft.textContent = "До нового года осталось: " + getDaysLeft();
+  today.textContent = 'Сегодня: ' + setWeekDay();
+  timeNow.textContent = 'Текущее время: ' + amPm;
+  daysLeft.textContent = 'До нового года осталось: ' + getDaysLeft();
   setTimeout(interactiveTime, 1000);
 };
-export default interactiveTime;
+export { interactiveTime };

@@ -1,9 +1,10 @@
-const timer = (deadline) => {
+const timer = deadline => {
   // deadline = new Date(new Date().getTime() + 6 * 24 * 60 * 60 * 1000); // for endless timer
-  const timerDays = document.getElementById("timer-days");
-  const timerHours = document.getElementById("timer-hours");
-  const timerMinutes = document.getElementById("timer-minutes");
-  const timerSeconds = document.getElementById("timer-seconds");
+
+  const timerDays = document.getElementById('timer-days');
+  const timerHours = document.getElementById('timer-hours');
+  const timerMinutes = document.getElementById('timer-minutes');
+  const timerSeconds = document.getElementById('timer-seconds');
 
   const getTimeRemaining = () => {
     let dateStop = new Date(deadline).getTime();
@@ -28,10 +29,10 @@ const timer = (deadline) => {
     let getTime = getTimeRemaining();
     if (getTime.timeRemaining > 0) {
       timerDays.textContent = getTime.days;
-      timerHours.textContent = ("0" + getTime.hours).slice(-2);
-      timerMinutes.textContent = ("0" + getTime.minutes).slice(-2);
-      timerSeconds.textContent = ("0" + getTime.seconds).slice(-2);
-      setTimeout(updateClock, 1000);
+      timerHours.textContent = ('0' + getTime.hours).slice(-2);
+      timerMinutes.textContent = ('0' + getTime.minutes).slice(-2);
+      timerSeconds.textContent = ('0' + getTime.seconds).slice(-2);
+      setTimeout(updateClock, 500);
     }
   };
   updateClock();
@@ -42,12 +43,12 @@ const timer = (deadline) => {
   //   if (getTime.timeRemaining < 0) clearInterval(idInterval);
   //   else {
   //     timerDays.textContent = getTime.days;
-  //     timerHours.textContent = getTime.hours;
-  //     timerMinutes.textContent = getTime.minutes;
-  //     timerSeconds.textContent = getTime.seconds;
+  //     timerHours.textContent = ('0' + getTime.hours).slice(-2);
+  //     timerMinutes.textContent = ('0' + getTime.minutes).slice(-2);
+  //     timerSeconds.textContent = ('0' + getTime.seconds).slice(-2);
   //   }
   // };
-  // const idInterval = setInterval(updateClock, 1000);
+  // const idInterval = setInterval(updateClock, 500);
   // updateClock();
 };
-export default timer;
+export { timer };
