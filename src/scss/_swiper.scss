@@ -1,0 +1,32 @@
+.swiper {
+  width: 1024px;
+  &-btn {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-size: 34px;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      -webkit-transition: background-color 0.2s;
+      transition: background-color 0.2s;
+    }
+  }
+  &-btn-prev {
+    left: 20px;
+    background-image: url(../images/icons/left-arrow.svg);
+    background-position: 25% 50%;
+  }
+  &-btn-next {
+    right: 20px;
+    background-image: url(../images/icons/right-arrow.svg);
+    background-position: 75% 50%;
+  }
+}

@@ -1,52 +1,6 @@
 @import 'bootstrap';
-@font-face {
-  font-family: Roboto;
-  src: url(../fonts/Roboto-Light.eot);
-  src: url(../fonts/Roboto-Light.eot?#iefix) format('embedded-opentype'),
-    url(../fonts/Roboto-Light.woff2) format('woff2'),
-    url(../fonts/Roboto-Light.woff) format('woff'),
-    url(../fonts/Roboto-Light.ttf) format('truetype'),
-    url(../fonts/Roboto-Light.svg#Roboto-Light) format('svg');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(../fonts/Roboto-Regular.eot);
-  src: url(../fonts/Roboto-Regular.eot?#iefix) format('embedded-opentype'),
-    url(../fonts/Roboto-Regular.woff2) format('woff2'),
-    url(../fonts/Roboto-Regular.woff) format('woff'),
-    url(../fonts/Roboto-Regular.ttf) format('truetype'),
-    url(../fonts/Roboto-Regular.svg#Roboto-Regular) format('svg');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(../fonts/Roboto-Medium.eot);
-  src: url(../fonts/Roboto-Medium.eot?#iefix) format('embedded-opentype'),
-    url(../fonts/Roboto-Medium.woff2) format('woff2'),
-    url(../fonts/Roboto-Medium.woff) format('woff'),
-    url(../fonts/Roboto-Medium.ttf) format('truetype'),
-    url(../fonts/Roboto-Medium.svg#Roboto-Medium) format('svg');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(../fonts/Roboto-Bold.eot);
-  src: url(../fonts/Roboto-Bold.eot?#iefix) format('embedded-opentype'),
-    url(../fonts/Roboto-Bold.woff2) format('woff2'),
-    url(../fonts/Roboto-Bold.woff) format('woff'),
-    url(../fonts/Roboto-Bold.ttf) format('truetype'),
-    url(../fonts/Roboto-Bold.svg#Roboto-Bold) format('svg');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+@import 'fonts';
+
 html {
   font-size: 10px;
 }
@@ -358,104 +312,7 @@ main a {
 .service img {
   width: 100%;
 }
-.portfolio {
-  padding: 5rem 0;
-  user-select: none;
-  &-content {
-    position: relative;
-    height: 775px;
-    margin: 0 auto;
-    display: block;
-  }
-  &-item {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    width: 100%;
-    opacity: 0;
-    -webkit-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-    & img {
-      height: auto;
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-    }
-    &-active {
-      opacity: 1;
-      -webkit-transition: opacity 0.5s;
-      transition: opacity 0.5s;
-    }
-  }
-  &-dots {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    margin: 20px auto 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    z-index: 5;
-  }
-  &-dot {
-    cursor: pointer;
-    height: 16px;
-    width: 16px;
-    margin: 0 10px;
-    border-radius: 50%;
-    border: solid #fff;
-    display: inline-block;
-    -webkit-transition: background-color, -webkit-transform 0.4s;
-    transition: background-color, transform 0.4s, -webkit-transform 0.4s;
-    &-active {
-      background-color: #19b5fe;
-      -webkit-transform: scale(1.2);
-      transform: scale(1.2);
-    }
-    &:hover {
-      background-color: #53c6fe;
-      -webkit-transform: scale(1.2);
-      transform: scale(1.2);
-    }
-  }
-  &-btn {
-    position: absolute;
-    cursor: pointer;
-    top: 50%;
-    z-index: 5;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.5);
-    background-repeat: no-repeat;
-    background-size: 34px;
-    border-radius: 50%;
-    -webkit-transition: background-color 0.2s;
-    transition: background-color 0.2s;
-    &.prev {
-      left: 20px;
-      background-image: url(../images/icons/left-arrow.svg);
-      background-position: 25% 50%;
-    }
-    &.next {
-      right: 20px;
-      background-image: url(../images/icons/right-arrow.svg);
-      background-position: 75% 50%;
-    }
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-      -webkit-transition: background-color 0.2s;
-      transition: background-color 0.2s;
-    }
-  }
-}
+
 .prove {
   padding: 5rem;
   background-color: #f2f8f9;
@@ -472,7 +329,6 @@ main a {
   margin-bottom: 6.4rem;
 }
 .companies .companies-hor-item {
-  margin: 0 1.2rem;
   display: inline-block;
   height: 140px;
 }
@@ -762,5 +618,10 @@ footer .web {
 .service-header-tab {
   user-select: none;
 }
+.portfolio {
+  padding: 5rem 0;
+  user-select: none;
+}
 
+// @import 'swiper';
 @import 'media';

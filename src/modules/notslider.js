@@ -1,3 +1,5 @@
+// this slider has been created just for fun. Do not use this slider. Use swiper.js instead.
+
 const notslider = (sliderName = 'slider', timeInterval = 3000) => {
   const sliderBlock = document.querySelector(`.${sliderName}-content`);
   const slides = document.querySelectorAll(`.${sliderName}-item`);
@@ -120,5 +122,3 @@ const notslider = (sliderName = 'slider', timeInterval = 3000) => {
 
   startSlide(timeInterval);
 };
-
-export { notslider };

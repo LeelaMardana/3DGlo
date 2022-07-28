@@ -16,4 +16,18 @@ module.exports = {
       watch: true,
     },
   },
+  module: {
+    rules: [
+      {
+        test: /\.(scss|css)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
+  },
 };
+
+// "css-loader","node-sass","sass-loader","style-loader" - для импортирования css/scss из node modules в js файлы чтобы не подключать стили через индекс или локально
+
+// "webpack-dev-server" и "webpack-cli" выполняет роль live server и запускает проект - npm start
+
+// "swiper" - слайдер
