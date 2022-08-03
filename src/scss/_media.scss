@@ -1,8 +1,3 @@
-@media (max-width: 1024px) {
-  .portfolio-content {
-    height: 650px;
-  }
-}
 @media (max-width: 991px) {
   body {
     font-size: 1.5rem;
@@ -56,20 +51,6 @@
   .service img {
     margin-bottom: 5rem;
   }
-  .portfolio-content {
-    height: 565px;
-    width: 100%;
-  }
-  .portfolio a {
-    font-size: 1.2rem;
-  }
-  .portfolio .row {
-    display: none;
-  }
-  .portfolio .slider {
-    display: inline-block;
-    width: 360px;
-  }
   .process p {
     font-size: 2.3rem;
   }
@@ -122,26 +103,6 @@
   .service-inner {
     padding: 0;
   }
-  .portfolio {
-    height: 100%;
-  }
-  .portfolio-content {
-    height: 400px;
-  }
-  .portfolio-dots {
-    display: none;
-  }
-  .portfolio a {
-    font-size: 1rem;
-  }
-  .portfolio .tabs ul {
-    border: none;
-  }
-  .portfolio .tabs ul li {
-    margin-bottom: 1rem;
-    border: 1px solid #19b5fe;
-    border-radius: 3rem;
-  }
   .process .circle {
     display: block;
     margin: 0 auto;
@@ -178,18 +139,11 @@
   .popup-content {
     left: 25%;
   }
-  .portfolio-btn {
-    width: 40px;
-    height: 40px;
-  }
-  .portfolio-btn.next {
-    right: 10px;
-  }
-  .portfolio-btn.prev {
-    left: 10px;
-  }
 }
 @media (max-width: 575px) {
+  main .timer-numbers {
+    font-size: 4rem;
+  }
   .service img {
     display: none;
   }
@@ -201,11 +155,14 @@
   .popup .popup-content {
     left: 18%;
   }
-  .portfolio-content {
-    height: 240px;
-  }
 }
 @media (max-width: 448px) {
+  main .timer-numbers {
+    font-size: 3rem;
+  }
+  main .timer-wrapper {
+    padding: 0 8px;
+  }
   body nav {
     width: 100%;
   }
@@ -252,15 +209,5 @@
   .popup .popup-content {
     left: 15%;
     width: 100%;
-  }
-  .portfolio-btn {
-    width: 35px;
-    height: 35px;
-  }
-  .portfolio-btn.next {
-    right: 5px;
-  }
-  .portfolio-btn.prev {
-    left: 5px;
   }
 }
