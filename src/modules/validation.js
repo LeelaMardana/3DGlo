@@ -11,13 +11,13 @@ const validation = () => {
   };
 
   const typeCyrillic = input => {
-    input.addEventListener('blur', e => {
+    input.addEventListener('input', e => {
       e.target.value = e.target.value
         .replace(/\s+/g, ' ') // заменить 1+ пробелов на 1
         .replace(/\-+/g, '-') // заменить 1+ дефизов на 1
         .replace(/^\s+|\s+$/g, '') // убрать все пробелы в начале и конце
         .replace(/^\-+|\-+$/g, '') // убрать все дефизы в начале и конце
-        .replace(/[^А-Яа-я\s-]/g, '') // убрать все символы за исключением:
+        .replace(/[^А-Яа-я/A-Za-z\s-]/g, '') // убрать все символы за исключением:
         .replace(/(^|\s)\S/g, a => {
           return a.toUpperCase();
         });
@@ -31,7 +31,7 @@ const validation = () => {
   };
   const typeTel = input => {
     input.addEventListener('input', e => {
-      e.target.value = e.target.value.replace(/[^\d\(\)\-]/g, '');
+      e.target.value = e.target.value.replace(/[^\d\(\)\-\+]/g, '');
     });
   };
 

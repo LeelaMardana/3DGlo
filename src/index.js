@@ -7,6 +7,7 @@ import { validation } from './modules/validation';
 import { tabs } from './modules/tabs';
 import { calc } from './modules/calc';
 import { swiper } from './modules/swiper';
+import { sendForm } from './modules/sendForm';
 
 timer('04 December 2022 20:16');
 menu();
@@ -15,3 +16,4 @@ validation();
 tabs();
 calc();
 swiper();
+sendForm({ formId: 'form1', someElem: [{ type: 'block', id: 'total' }] });
