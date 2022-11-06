@@ -4,6 +4,7 @@ const menu = () => {
 
   //функция плавного скролла
   const scrollTo = id => {
+    if (id === '#') return;
     document.querySelector(id).scrollIntoView({
       behavior: 'smooth',
       block: 'start',

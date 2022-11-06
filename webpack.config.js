@@ -25,7 +25,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     clean: true,
-    filename: 'main.js',
+    filename: 'script.js',
     assetModuleFilename: 'img/[hash][ext][query]',
   },
   plugins: [
