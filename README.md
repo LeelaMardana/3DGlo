@@ -1,8 +1,12 @@
 # 3D GLO
 
+
 Обработка html, css, scss, js, image compress
 
 Для установки пакетов используйте команду npm install
+
+![Screenshot_1](https://user-images.githubusercontent.com/91306218/200157796-c4680625-bcfe-4ee8-b3ed-21e5108390de.png)
+
 
 ## Команды
 
