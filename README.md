@@ -1,4 +1,4 @@
-# WEBPACK 5
+# 3D GLO
 
 Обработка html, css, scss, js, image compress
 
